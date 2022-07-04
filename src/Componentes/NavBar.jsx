@@ -1,4 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./NavBar.css";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
   return (
@@ -7,7 +9,7 @@ const NavBar = () => {
         <a className="navbar-brand" href="#">
           React-Piotti
         </a>
-
+      </div>
         <div
           className="collapse navbar-collapse d-flex justify-content-center"
           id="navbarText"
@@ -30,9 +32,11 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <form class="d-flex">
+        <div>
+        <form className="d-flex">
+          <CartWidget />
           <button
-            class="btn btn-outline-success me-2 navbar-brand"
+            className="btn btn-outline-success me-2 navbar-brand"
             type="button"
           >
             Main button
