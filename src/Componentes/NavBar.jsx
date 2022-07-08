@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./NavBar.css";
+import "../Style/NavBar.css";
 import CartWidget from "./CartWidget";
 
 const NavBar = () => {
@@ -10,29 +10,29 @@ const NavBar = () => {
           React-Piotti
         </a>
       </div>
-        <div
-          className="collapse navbar-collapse d-flex justify-content-center"
-          id="navbarText"
-        >
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
+      <div
+        className="collapse navbar-collapse d-flex justify-content-center"
+        id="navbarText"
+      >
+        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="#">
+              Home
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Features
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Pricing
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
         <form className="d-flex">
           <CartWidget />
           <button
