@@ -1,40 +1,48 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ItemCount from "../Componentes/ItemCount";
+
 // import ListaAutos from "../data/ListaAutos";
 import ItemList from "../Componentes/ItemList";
-const { ListaAutos } = require("../data/ListaAutos");
 
-let is_ok = true;
-
-const customFetch = (time, task) => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (is_ok) {
-        resolve(task);
-      } else {
-        reject("Error in the customFetch :(");
-      }
-    }, time);
-  });
-};
+const films = [
+  {
+    id: 1,
+    modelo: "MDX",
+    marca: "Acura",
+    precio: "$58981.34",
+    anio: 2012,
+    imagen: "https://qesot.com/img_dir/cars/32166-acura-mdx-iii-2017-1.jpeg",
+  },
+  {
+    id: 2,
+    modelo: "Fiat",
+    marca: "Cronos",
+    precio: "$58981.34",
+    anio: 2020,
+    imagen: "https://qesot.com/img_dir/cars/32166-acura-mdx-iii-2017-1.jpeg",
+  },
+  {
+    id: 3,
+    modelo: "A1",
+    marca: "Audi",
+    precio: "$58981.34",
+    anio: 2019,
+    imagen: "https://qesot.com/img_dir/cars/32166-acura-mdx-iii-2017-1.jpeg",
+  },
+];
 
 const ItemListContainer = () => {
-  const [autoList, setAutoList] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    customFetch(2000, ListaAutos)
-      .then((res) => setAutoList(res))
-      .catch((err) => console.log(err));
-  }, [autoList]);
+    const getData = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(films);
+      }, 2000);
+    });
 
-  // const myPromise = new Promise((resolve, reject) => {
-  //   setTimeout(() => {
-  //     resolve(ListaAutos);
-  //   }, 2000);
-  // });
-  // myPromise.then((res) => {
-  //   setAutoList(res);
-  // });
+    getData.then((res) => setData(res));
+  }, []);
 
   const onAdd = (a) => {
     alert("Se agrego al carrito");
@@ -42,7 +50,7 @@ const ItemListContainer = () => {
   return (
     <div>
       <h1>Hola ItemListContainer !!</h1>
-      <ItemList items={autoList} />
+      <ItemList data={data} />
       <ItemCount initial={1} stock={5} onAdd={onAdd} />
     </div>
   );
