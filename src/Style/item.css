@@ -1,9 +1,17 @@
 .film {
     display: block;
-    width: 300px;
+    /* width: 300px; */
+    max-width: auto;
 }
 .film img{
-    width: 100px;
-    height: 100px;
+    /* width: 100px;
+    height: 100px; */
     object-fit: cover;
+}
+.card {
+    margin: 5px;
+    display: inline-flex;
+    width: 15rem;
+    
+    
 }
