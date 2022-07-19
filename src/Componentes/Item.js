@@ -9,15 +9,15 @@ const onAdd = (a) => {
 
 const Item = ({ info }) => {
   return (
-    <div class="card   mb-3 text-center">
-      <div class="card-body">
-        <img src={info.imagen} class="card-img-top img-fluid" alt="" />
-        <h2 class="card-title">{info.marca}</h2>
-        <h5 class="card-subtitle mb-2 text-muted">{info.modelo}</h5>
-        <h5 class="card-subtitle mb-2 text-muted">{info.anio}</h5>
-        <p class="card-text">${info.precio}</p>
+    <div className="card   mb-3 text-center">
+      <div className="card-body">
+        <img src={info.imagen} className="card-img-top img-fluid" alt="" />
+        <h2 className="card-title">{info.marca}</h2>
+        <h5 className="card-subtitle mb-2 text-muted">{info.modelo}</h5>
+        <h5 className="card-subtitle mb-2 text-muted">{info.anio}</h5>
+        <p className="card-text">${info.precio}</p>
         <div
-          class="btn-group"
+          className="btn-group"
           role="group"
           aria-label="Basic mixed styles example"
         ></div>
