@@ -1,14 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Style/NavBar.css";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link to="/" className="navbar-brand">
           React-Piotti
-        </a>
+        </Link>
       </div>
       <div
         className="collapse navbar-collapse d-flex justify-content-center"
@@ -16,19 +17,19 @@ const NavBar = () => {
       >
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">
+            <Link to="/" className="nav-link active" aria-current="page">
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Features
-            </a>
+            <Link to="/category/1" className="nav-link">
+              SUV
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Pricing
-            </a>
+            <Link to="/category/2" className="nav-link">
+              Autos
+            </Link>
           </li>
         </ul>
       </div>

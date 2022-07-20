@@ -28,7 +28,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
       <button onClick={sumarClick} className="plus bg-dark">
         +
       </button>
-      <div>
+      <div className="mt-1">
         <button className="btn btn-primary" onClick={onAdd}>
           Agregar
         </button>

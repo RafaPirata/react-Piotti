@@ -2,6 +2,7 @@ import React from "react";
 import "../Style/item.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ItemCount from "../Componentes/ItemCount";
+import { Link } from "react-router-dom";
 
 const onAdd = (a) => {
   alert("Se agrego al carrito");
@@ -16,6 +17,14 @@ const Item = ({ info }) => {
         <h5 className="card-subtitle mb-2 text-muted">{info.modelo}</h5>
         <h5 className="card-subtitle mb-2 text-muted">{info.anio}</h5>
         <p className="card-text">${info.precio}</p>
+        <Link
+          to={`/item/${info.id}`}
+          className="nav-link active text-primary"
+          aria-current="page"
+        >
+          Ficha Tecnica
+        </Link>
+
         <div
           className="btn-group"
           role="group"
