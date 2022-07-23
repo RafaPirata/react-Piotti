@@ -5,14 +5,16 @@ import React, { useState } from "react";
 const ItemCount = ({ initial, stock, onAdd }) => {
   const [count, setCount] = useState(initial);
 
-  const sumarClick = () => {
+  const sumarClick = (e) => {
+    e.stopPropagation();
     if (count < stock) {
       const aux = count + 1;
       setCount(aux);
     } else {
     }
   };
-  const restarClick = () => {
+  const restarClick = (e) => {
+    e.stopPropagation();
     if (count > initial) {
       const aux = count - 1;
       setCount(aux);
@@ -21,11 +23,11 @@ const ItemCount = ({ initial, stock, onAdd }) => {
 
   return (
     <div className="qty mt-5">
-      <button onClick={restarClick} className="minus bg-dark">
+      <button onClick={(e) => restarClick(e)} className="minus bg-dark">
         -
       </button>
       <input type="" className="count" name="qty" value={count} />
-      <button onClick={sumarClick} className="plus bg-dark">
+      <button onClick={(e) => sumarClick(e)} className="plus bg-dark">
         +
       </button>
       <div className="mt-1">

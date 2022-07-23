@@ -58,6 +58,41 @@ const ListaAutos = [
     detalle:
       "Cuenta con un nuevo motor de la familia ECOTEC con 1.4 L Turbo que desarrolla 153 hp y 240 Nm de torque. Provee un balance perfecto entre desempeño, eficiencia y refinamiento.",
   },
+  {
+    id: 6,
+    modelo: "Focus",
+    categoryId: "2",
+    marca: "Ford",
+    precio: "68981.34",
+    anio: 2020,
+    imagen:
+      "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2019/03/ford-focus-2020.jpg",
+    detalle: "El único motor es un motor gasolina de 2.3 litros y 140 CV.",
+  },
+  {
+    id: 7,
+    modelo: "X6",
+    categoryId: "1",
+    marca: "BMW",
+    precio: "98981.34",
+    anio: 2020,
+    imagen:
+      "https://www.elcarrocolombiano.com/wp-content/uploads/2019/07/20190703-BMW-X6-2020-01.jpg",
+    detalle:
+      "El BMW X6 M de la segunda generación instaló un motor 4.4 V8 Twin-Turbo de 575 CV capaz de llevar a este SUV hasta los 250 Km/h de velocidad máxima y conseguir hacer el 0-100 Km/h en 4,2 segundos.",
+  },
+  {
+    id: 8,
+    modelo: "X1",
+    categoryId: "1",
+    marca: "BMW",
+    precio: "98981.34",
+    anio: 2021,
+    imagen:
+      "https://www.diariomotor.com/imagenes/2012/10/bmw-x1-exterior-2022-4-62be94ed71493.jpg",
+    detalle:
+      "Actualmente, el BMW X1 se encuentra disponible con cuatro propulsores diésel (16d con 116 CV, 18d con 150 CV, 20d con 190 CV y 25d con 231 CV), y dos de gasolina (18i con 140 CV y 20i con 192 CV) pudiendo elegir entre motores de tres o cuatro cilindros.",
+  },
 ];
 
 export default ListaAutos;

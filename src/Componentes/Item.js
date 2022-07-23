@@ -4,7 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ItemCount from "../Componentes/ItemCount";
 import { Link } from "react-router-dom";
 
-const onAdd = (a) => {
+const onAdd = (e) => {
+  e.stopPropagation();
   alert("Se agrego al carrito");
 };
 
@@ -17,13 +18,15 @@ const Item = ({ info }) => {
         <h5 className="card-subtitle mb-2 text-muted">{info.modelo}</h5>
         <h5 className="card-subtitle mb-2 text-muted">{info.anio}</h5>
         <p className="card-text">${info.precio}</p>
-        <Link
-          to={`/item/${info.id}`}
-          className="nav-link active text-primary"
-          aria-current="page"
-        >
-          Ficha Tecnica
-        </Link>
+        <button className="text-white btn btn-primary">
+          <Link
+            to={`/item/${info.id}`}
+            className="text-white"
+            aria-current="page"
+          >
+            Ficha Tecnica
+          </Link>
+        </button>
 
         <div
           className="btn-group"
@@ -33,13 +36,6 @@ const Item = ({ info }) => {
         <ItemCount initial={1} stock={5} onAdd={onAdd} />
       </div>
     </div>
-
-    // <a href="" className="film">
-    //   <img src={info.imagen} alt="" />
-    //   <p>{info.marca} </p>
-    //   <p>{info.precio} </p>
-    //   <p>{info.anio} </p>
-    // </a>
   );
 };
 export default Item;

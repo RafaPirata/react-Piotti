@@ -7,7 +7,7 @@ import { useParams } from "react-router";
 
 const ItemDetallContainer = () => {
   const [data, setData] = useState([]);
-  console.log(useParams());
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const ItemDetallContainer = () => {
         .catch((err) => console.log(err));
     }
   }, [id]);
-  console.log(useParams());
+
   return (
     <div>
       <ItemDetail data={data} />
