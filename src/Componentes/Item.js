@@ -1,13 +1,8 @@
 import React from "react";
 import "../Style/item.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ItemCount from "../Componentes/ItemCount";
-import { Link } from "react-router-dom";
 
-const onAdd = (e) => {
-  e.stopPropagation();
-  alert("Se agrego al carrito");
-};
+import { Link } from "react-router-dom";
 
 const Item = ({ info }) => {
   return (
@@ -27,13 +22,6 @@ const Item = ({ info }) => {
             Ficha Tecnica
           </Link>
         </button>
-
-        <div
-          className="btn-group"
-          role="group"
-          aria-label="Basic mixed styles example"
-        ></div>
-        <ItemCount initial={1} stock={5} onAdd={onAdd} />
       </div>
     </div>
   );

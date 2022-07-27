@@ -1,0 +1,16 @@
+.img-fluid{
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+}
+.card2 {
+    margin: 5px;
+    display: contents;
+    width: 80%;
+       
+    
+    
+}
+.row2{
+ align-items: center;
+}

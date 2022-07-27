@@ -26,12 +26,16 @@ const ItemCount = ({ initial, stock, onAdd }) => {
       <button onClick={(e) => restarClick(e)} className="minus bg-dark">
         -
       </button>
-      <input type="" className="count" name="qty" value={count} />
+      <input className="count" name="qty" value={count} />
       <button onClick={(e) => sumarClick(e)} className="plus bg-dark">
         +
       </button>
       <div className="mt-1">
-        <button className="btn btn-primary" onClick={onAdd}>
+        <button
+          disabled={stock <= 0}
+          className="btn btn-primary"
+          onClick={() => onAdd(count)}
+        >
           Agregar
         </button>
       </div>

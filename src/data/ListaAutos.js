@@ -4,7 +4,8 @@ const ListaAutos = [
     modelo: "MDX",
     categoryId: "1",
     marca: "Acura",
-    precio: "58981.34",
+    precio: 58981.34,
+    stock: 2,
     anio: 2012,
     imagen: "https://qesot.com/img_dir/cars/32166-acura-mdx-iii-2017-1.jpeg",
     detalle:
@@ -15,7 +16,8 @@ const ListaAutos = [
     modelo: "Fiat",
     categoryId: "2",
     marca: "Cronos",
-    precio: "58981.34",
+    precio: 58981.34,
+    stock: 5,
     anio: 2020,
     imagen:
       "https://1.bp.blogspot.com/-agCovB3uit8/XUL_-xAZQWI/AAAAAAAAeuw/1l6hxLKC1YI1m2JEMicAs7MyhcgetNZGQCLcBGAs/s1600/Fiat-Cronos-2020-%25283%2529.jpg",
@@ -27,7 +29,8 @@ const ListaAutos = [
     modelo: "A1",
     categoryId: "2",
     marca: "Audi",
-    precio: "58981.34",
+    precio: 58981.34,
+    stock: 2,
     anio: 2019,
     imagen:
       "https://img.remediosdigitales.com/27d240/audi-a1-2019_2/1366_2000.jpg",
@@ -39,7 +42,8 @@ const ListaAutos = [
     modelo: "kicks",
     categoryId: "1",
     marca: "Nissan",
-    precio: "88981.34",
+    precio: 88981.34,
+    stock: 3,
     anio: 2019,
     imagen:
       "https://img.autosblogmexico.com/2019/05/11/jy4ZkaKS/screenshot-2019-05-10-at-13-51-39-2e98.png",
@@ -51,7 +55,8 @@ const ListaAutos = [
     modelo: "Cruze",
     categoryId: "2",
     marca: "Chevrolet",
-    precio: "78981.34",
+    precio: 78981.34,
+    stock: 4,
     anio: 2021,
     imagen:
       "https://www.karvi.com.ar/blog/wp-content/uploads/2021/01/Cruze.jpg",
@@ -63,7 +68,8 @@ const ListaAutos = [
     modelo: "Focus",
     categoryId: "2",
     marca: "Ford",
-    precio: "68981.34",
+    precio: 68981.34,
+    stock: 5,
     anio: 2020,
     imagen:
       "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2019/03/ford-focus-2020.jpg",
@@ -74,7 +80,8 @@ const ListaAutos = [
     modelo: "X6",
     categoryId: "1",
     marca: "BMW",
-    precio: "98981.34",
+    precio: 98981.34,
+    stock: 1,
     anio: 2020,
     imagen:
       "https://www.elcarrocolombiano.com/wp-content/uploads/2019/07/20190703-BMW-X6-2020-01.jpg",
@@ -86,7 +93,8 @@ const ListaAutos = [
     modelo: "X1",
     categoryId: "1",
     marca: "BMW",
-    precio: "98981.34",
+    precio: 98981.34,
+    stock: 2,
     anio: 2021,
     imagen:
       "https://www.diariomotor.com/imagenes/2012/10/bmw-x1-exterior-2022-4-62be94ed71493.jpg",
