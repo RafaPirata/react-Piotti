@@ -1,11 +1,53 @@
 import React from "react";
 import { createContext, useState } from "react";
+import { db } from "../data/LIstaEnFirebase";
+import {
+  collection,
+  getDocs,
+  query,
+  where,
+  doc,
+  getDoc,
+} from "firebase/firestore";
 
 export const CartContext = createContext();
 
+export const firestoreFetch = async (category) => {
+  //declaro variable para almacenar lo que traigo de la base de dato
+  let cat;
+  // genero un condicional por categoria
+  if (category) {
+    cat = query(
+      collection(db, "products"),
+      where("categoryId", "==", category)
+    );
+  } else {
+    cat = query(collection(db, "products"));
+  }
+  // la promesa devuelve y se almacena y esta la mapeo para mostrar
+  const querySnapshot = await getDocs(cat);
+  const dataFromFirestore = querySnapshot.docs.map((docu) => ({
+    id: docu.id,
+    ...docu.data(),
+  }));
+  return dataFromFirestore;
+};
+//genero funcion para llamar un solo producto de la base de datos
+export const firestoreFetchOne = async (id) => {
+  const docRef = doc(db, "products", id);
+  const docSnap = await getDoc(docRef);
+  if (docSnap.exists()) {
+    return {
+      id: docSnap.id,
+      ...docSnap.data(),
+    };
+  } else {
+    console.log("No existe");
+  }
+};
+
 const CartContextProvider = ({ children }) => {
   const [cartList, setCartList] = useState([]);
-
   const ClearCart = () => setCartList([]);
 
   const isInCart = (id) =>
@@ -72,6 +114,8 @@ const CartContextProvider = ({ children }) => {
         totalPrecio,
         totalDescuento,
         calcItemsQty,
+        firestoreFetch,
+        firestoreFetchOne,
       }}
     >
       {children}

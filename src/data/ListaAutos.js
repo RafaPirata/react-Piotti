@@ -6,7 +6,7 @@ const ListaAutos = [
     marca: "Acura",
     precio: 58981.34,
     stock: 2,
-    anio: 2012,
+    anio: 2017,
     imagen: "https://qesot.com/img_dir/cars/32166-acura-mdx-iii-2017-1.jpeg",
     detalle:
       "El motor V-6 de 290 caballos de fuerza81 combinado con una transmisión automática de 10 velocidades con cambios rápidos proporciona una potencia y aceleración imponentes. Cambie de marcha a toda velocidad con los mandos de transmisión para disfrutar de un andar más deportivo. Con una capacidad de remolque de hasta 3,500 libras,91 la MDX 2023 emprende cualquier aventura con ambición.",
@@ -101,6 +101,44 @@ const ListaAutos = [
     detalle:
       "Actualmente, el BMW X1 se encuentra disponible con cuatro propulsores diésel (16d con 116 CV, 18d con 150 CV, 20d con 190 CV y 25d con 231 CV), y dos de gasolina (18i con 140 CV y 20i con 192 CV) pudiendo elegir entre motores de tres o cuatro cilindros.",
   },
+  {
+    id: 9,
+    modelo: "C-220",
+    categoryId: "2",
+    marca: "Mercedez Benz",
+    precio: 198981,
+    stock: 2,
+    anio: 2022,
+    imagen:
+      "https://autotest.com.ar/wp-content/uploads/2021/02/MERCEDES-BENZ-CLASE-C-2022.jpg",
+    detalle:
+      "En gasolina, el Mercedes Clase C usa motores M254 de familia modular con microhibridación EQ Boost (reciben por tanto la etiqueta ECO de la DGT) con potencias que van desde los 170 CV (C 180) hasta los 258 CV del C 300.",
+  },
+  {
+    id: 10,
+    modelo: "GLS",
+    categoryId: "1",
+    marca: "Mercedez Benz",
+    precio: 198981,
+    stock: 2,
+    anio: 2020,
+    imagen:
+      "https://cdn.motor1.com/images/mgl/PEvQr/s3/lanzamiento-mercedes-benz-clase-gls.jpg",
+    detalle:
+      "El Mercedes-Benz Clase GLS, anteriormente llamado Clase GL, es un automóvil todoterreno de lujo del segmento F producido por el fabricante alemán Mercedes-Benz desde el año 2006 para la demanda del mercado americano",
+  },
 ];
 
 export default ListaAutos;
+
+// const firestoreFetch = async () => {
+//             const querySnapshot = await getDocs(collection(db, "products"));
+//             const dataFromFirestore = querySnapshot.docs.map((doc) => ({
+//                 id: doc.id,
+//                 ...doc.data()
+//             }))
+//             return dataFromFirestore
+//         }
+//         firestoreFetch()
+//             .then(result => setDatos(result))
+//             .catch(err => console.log(err))
