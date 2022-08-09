@@ -4,12 +4,13 @@ import { CartContext } from "./CartContext";
 import { Link } from "react-router-dom";
 
 const CartWidget = () => {
-  const test = useContext(CartContext);
-  if (test.cartList.length > 0) {
+  const { calcItemsQty } = useContext(CartContext);
+
+  if (calcItemsQty() > 0) {
     return (
       <div className="navbar-brand">
-        {test.calcItemsQty()}
         <Link to="/Cart">
+          {calcItemsQty()}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"

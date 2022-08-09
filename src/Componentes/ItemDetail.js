@@ -37,7 +37,7 @@ function ItemDetail({ data }) {
                 ) : (
                   <Link to="/Cart">
                     <button className="btn btn-primary">
-                      Terminar Mi Compra
+                      Agregar a su compra
                     </button>
                   </Link>
                 )}

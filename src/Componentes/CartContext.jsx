@@ -78,6 +78,9 @@ const CartContextProvider = ({ children }) => {
     }
     setCartList(newCart);
   };
+  const removeList = () => {
+    setCartList([]);
+  };
 
   const totalPrecio = () => {
     let qtys = cartList.map((item) => item.costo * item.qty);
@@ -112,6 +115,7 @@ const CartContextProvider = ({ children }) => {
         isInCart,
         removeProduct,
         totalPrecio,
+        removeList,
         totalDescuento,
         calcItemsQty,
         firestoreFetch,
