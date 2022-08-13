@@ -3,6 +3,10 @@ Alumno: Rafael Ricardo Piotti.
 Comisión: 31225.
 ¡¡Les doy la Bienvenida a mi proyecto!!
 
+![Aqui las imgenes de mi proyecto]
+(https://github.com/RafaPirata/react-Piotti/blob/main/public/React_1.jpeg)
+(https://github.com/RafaPirata/react-Piotti/blob/main/public/React_2.jpeg)
+
 Este proyecto tiene el objetivo de simular un ecommerce, una tienda online de autos. La idea es vender autos, SUV o camionetas, el usuario podra hacer la vista previa de su vehiculo y su simulacion de compra sera la seña para poder empezar con la compra.
 Decidí llamar la tienda "PiottiMotor", para darle identidad familiar.
 
