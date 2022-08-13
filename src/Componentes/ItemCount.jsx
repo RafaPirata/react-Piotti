@@ -26,7 +26,13 @@ const ItemCount = ({ initial, stock, onAdd }) => {
       <button onClick={(e) => restarClick(e)} className="minus bg-dark">
         -
       </button>
-      <input className="count" name="qty" value={count} />
+      <input
+        className="count"
+        name="qty"
+        type="number"
+        onChange={(e) => setCount(e.target.value)}
+        value={count}
+      />
       <button onClick={(e) => sumarClick(e)} className="plus bg-dark">
         +
       </button>

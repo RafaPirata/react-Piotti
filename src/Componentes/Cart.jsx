@@ -16,7 +16,6 @@ import { db } from "../data/LIstaEnFirebase";
 const Cart = () => {
   const { removeProduct } = useContext(CartContext);
   const test = useContext(CartContext);
-
   const createOrder = () => {
     let itemsForDB = test.cartList.map((item) => ({
       id: item.id,
@@ -35,14 +34,16 @@ const Cart = () => {
       items: itemsForDB,
       total: test.totalPrecio(),
     };
-    console.log(order);
+
     const createOrderInFirestore = async () => {
       const newOrderRef = doc(collection(db, "orders"));
       await setDoc(newOrderRef, order);
       return newOrderRef;
     };
     createOrderInFirestore()
-      .then((result) => alert("your order has been created. ID=" + result.id))
+      .then((result) =>
+        alert("Tu oreden fue recibida con exito. Codigo de pedido=" + result.id)
+      )
       .catch((e) => console.log(e));
 
     test.cartList.forEach(async (item) => {
@@ -56,60 +57,57 @@ const Cart = () => {
   };
 
   return (
-    <div className="mt-3 d-flex justify-content-start">
-      <div className="mt-3 d-flex justify-content-start">
-        <Link to="/">
-          <button className="btn btn-primary">Continuar de compra</button>
-        </Link>
-      </div>
-      <div>
-        <div>
-          {test.cartList.length === 0 ? (
-            <Link to="/">Carro vacio</Link>
-          ) : (
-            test.cartList.map((item) => (
-              <div className="card mb-3 card1">
-                <div className="row g-0 row1">
-                  <div className="col-md-3">
-                    <img
-                      src={item.img}
-                      className="img-fluid rounded-start"
-                      alt=""
-                    />
-                    <h5 className="card-title">{item.marca}</h5>
-                    <h5 className="card-title">{item.modelo}</h5>
-                  </div>
-
-                  <div className="col-md-3">
-                    <div className="card-body text-end">
-                      <p className="card-subtitle mb-2 text-muted">
-                        {item.qty} item
-                      </p>
-                      <p className="card-subtitle mb-2 text-muted">
-                        Precio Unidad: ${item.costo}
-                      </p>
-                      <p className="card-subtitle mb-2 text-muted">
-                        SubTotal: ${item.costo * item.qty}
-                      </p>
-                      <button
-                        className="btn btn-primary"
-                        onClick={() => removeProduct(item.id)}
-                      >
-                        Eliminar
-                      </button>
-                    </div>
+    <div className="container">
+      <div className="row">
+        <div className="mt-3 d-flex justify-content-start">
+          <Link to="/">
+            <button className="btn btn-primary">Continuar de compra</button>
+          </Link>
+        </div>
+        <div className="col-md-6">
+          <div className="">
+            {test.cartList.length === 0 ? (
+              <h5 className="Vacio">
+                su carro es vacio !!!
+                <img
+                  className="ImgVacio"
+                  src="https://www.lavanguardia.com/files/article_main_microformat/uploads/2018/07/18/5f15fdc0e16a3.jpeg"
+                  alt=""
+                />
+              </h5>
+            ) : (
+              test.cartList.map((item) => (
+                <div key={item.id} className="d-flex position-relative">
+                  <img
+                    src={item.img}
+                    className="flex-shrink-0 me-3 imgCart img-thumbnail"
+                    alt="imagen"
+                  />
+                  <div className="TitleCart">
+                    <h5 className="mt-0">
+                      {item.marca}: {item.modelo}
+                    </h5>
+                    <p>Cantidad: {item.qty}</p>
+                    <p>Precio Unidad: ${item.costo}</p>
+                    <p>SubTotal: ${item.costo * item.qty}</p>
+                    <button
+                      className="btn btn-primary"
+                      onClick={() => removeProduct(item.id)}
+                    >
+                      Eliminar
+                    </button>
                   </div>
                 </div>
-              </div>
-            ))
-          )}
+              ))
+            )}
+          </div>
         </div>
-        <div>
+        <div className="col-md-6">
           {test.cartList.length > 0 && (
             <div>
               <div className="">
                 <button
-                  className="btn bg-danger mt-3 col-md-2"
+                  className="btn bg-danger mt-3 col-md-6"
                   onClick={test.ClearCart}
                 >
                   Vaciar la compra
@@ -121,13 +119,13 @@ const Cart = () => {
                     {test.calcItemsQty()} item
                   </p>
                   <p className="card-title mb-2">
-                    Total $ {test.totalPrecio()}
+                    Total: ${test.totalPrecio()}
                   </p>
                   <p className="card-title mb-2 text-success">
                     Descuento:10% ${test.totalDescuento()}
                   </p>
                   <button className="btn btn-success" onClick={createOrder}>
-                    CHECKOUT NOW
+                    GENERAR PEDIDO
                   </button>
                 </div>
               </div>

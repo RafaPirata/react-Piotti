@@ -36,12 +36,6 @@ const NavBar = () => {
       <div>
         <form className="d-flex">
           <CartWidget />
-          <button
-            className="btn btn-outline-success me-2 navbar-brand"
-            type="button"
-          >
-            Main button
-          </button>
         </form>
       </div>
     </nav>

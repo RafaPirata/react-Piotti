@@ -2,3 +2,6 @@
 .container-fluid{
     width: 40%;
 }
+.navbar{
+    padding: 1.5rem;
+}

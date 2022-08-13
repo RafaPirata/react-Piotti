@@ -14,3 +14,35 @@
 .row2{
  align-items: center;
 }
+
+.imgCart{
+    width: 50%;
+    height: auto;
+    margin: 10px;
+    padding: 2px;
+}
+.TitleCart{
+    margin: 2px;
+    padding: 5px;
+    text-align: start;
+}
+.Vacio{
+   
+    display:inline-block;
+    margin: 30px;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    color: blue;
+    text-shadow: 0.5px 1px 3px black;
+    
+    
+}
+.ImgVacio{
+    margin: 20px;
+    width: 80%;
+    border-top-left-radius: 30%;
+    border-top-right-radius:  30%;
+    
+    height: auto;
+}

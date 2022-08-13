@@ -8,7 +8,7 @@ const CartWidget = () => {
 
   if (calcItemsQty() > 0) {
     return (
-      <div className="navbar-brand">
+      <div className="spinner-grow text-danger" role="status">
         <Link to="/Cart">
           {calcItemsQty()}
           <svg

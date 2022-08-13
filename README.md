@@ -12,7 +12,9 @@ Para este proyecto decidí usar una dependencia para poder añadir estilos a mis
 
 Decisiones tomadas hasta el momento:
 
-    Todas las imagenes que se renderizan en mi proyecto están en una carpeta llamada "data". las cuales en formato de array con https.
+    Se implementa el uso de la base de datos de Google, Firebase.
+    Se genero una carpeta llamada "data" donde almaceno la peticion a una base de datos, en este trabajo la de Firesbase.
+    En la carpeta de CartContext almaceno las mayoria de las funciones de mi proyecto y les hago llamado cuando hace falta.
 
     Tengo un archivo llamado "style", en donde le agrego los diseños a mis contenedores.
 

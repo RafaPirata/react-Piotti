@@ -8,7 +8,7 @@ const Item = ({ info }) => {
   return (
     <div className="card   mb-3 text-center">
       <div className="card-body">
-        <img src={info.imagen} className="card-img-top img-fluid" alt="" />
+        <img src={info.imagen} className="card rounded img-fluid" alt="" />
         <h2 className="card-title">{info.marca}</h2>
         <h5 className="card-subtitle mb-2 text-muted">{info.modelo}</h5>
         <h5 className="card-subtitle mb-2 text-muted">{info.anio}</h5>

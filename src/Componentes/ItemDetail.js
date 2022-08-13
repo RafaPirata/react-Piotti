@@ -21,10 +21,11 @@ function ItemDetail({ data }) {
           </div>
           <div className="col-md-6">
             <div className="card-body">
-              <h5 className="card-title">Marca: {data.marca}</h5>
+              <h5 className="card-title">
+                {data.marca} : {data.modelo}
+              </h5>
               <p className="text-primary">Ficha tecnica: {data.detalle}</p>
               <p className="card-subtitle mb-2 text-muted">Año: {data.anio}</p>
-              <p className="card-text">Modelo: {data.modelo}</p>
               <p className="card-text">Precio: ${data.precio}</p>
               <p className="card-text">stock: {data.stock}</p>
               <div>
